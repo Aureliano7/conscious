@@ -78,30 +78,24 @@
 ## 🛠️ Tech Stack
 
 ### Frontend (PWA)
-```
-⚛️  React 18 + TypeScript + Vite
-🧠  Redux Toolkit + Redux Saga (state management)
-🎨  TailwindCSS + Headless UI (design system)
-🗺️  Leaflet + OpenStreetMap (2D visualization)
-✨  Three.js + Canvas (progressive 3D support)
-🌐  Workbox (PWA offline support)
-```
+- ⚛️ React 18 + TypeScript + Vite
+- 🧠 Redux Toolkit + Redux Saga (state management)
+- 🎨 TailwindCSS + Headless UI (design system)
+- 🗺️ Leaflet + OpenStreetMap (2D visualization)
+- ✨ Three.js + Canvas (progressive 3D support)
+- 🌐 Workbox (PWA offline support)
 
 ### P2P & Backend
-```
-🔗  libp2p (js) + WebRTC/WebSocket (network layer)
-🗄️  OrbitDB + IndexedDB (decentralized storage)
-🔐  WebCrypto API + noble-curves (cryptography)
-📦  IPFS (optional media storage, Phase 2)
-```
+- 🔗 libp2p (js) + WebRTC/WebSocket (network layer)
+- 🗄️ OrbitDB + IndexedDB (decentralized storage)
+- 🔐 WebCrypto API + noble-curves (cryptography)
+- 📦 IPFS (optional media storage, Phase 2)
 
 ### DevOps & Testing
-```
-🧪  Vitest (unit) + Playwright (e2e) + k6 (load testing)
-🔍  ESLint + Prettier + Husky (code quality)
-🚀  GitHub Actions + Cloudflare Pages (CI/CD)
-📊  Prometheus + Grafana (monitoring)
-```
+- 🧪 Vitest (unit) + Playwright (e2e) + k6 (load testing)
+- 🔍 ESLint + Prettier + Husky (code quality)
+- 🚀 GitHub Actions + Cloudflare Pages (CI/CD)
+- 📊 Prometheus + Grafana (monitoring)
 
 [View full `package.json`](package.json) • [Architecture Diagram](docs/ARCHITECTURE.md)
 
@@ -110,11 +104,9 @@
 ## ⚡ Quick Start
 
 ### Prerequisites
-```bash
-Node.js ≥ 20 LTS
-npm ≥ 10 or pnpm ≥ 8
-Modern browser with WebCrypto support (Chrome 110+, Firefox 102+, Safari 16.4+)
-```
+- Node.js ≥ 20 LTS
+- npm ≥ 10 or pnpm ≥ 8
+- Modern browser with WebCrypto support (Chrome 110+, Firefox 102+, Safari 16.4+)
 
 ### 1. Clone & Install
 ```bash
@@ -134,7 +126,7 @@ cp .env.example .env.local
 ### 3. Run Development Server
 ```bash
 npm run dev
-# → Open http://localhost:5173 in your browser
+# Open http://localhost:5173 in your browser
 ```
 
 ### 4. Build for Production
@@ -155,7 +147,7 @@ npm run audit         # security audit
 ```bash
 cd packages/bootstrap-node
 npm run start
-# → Runs a libp2p bootstrap node for peer discovery
+# Runs a libp2p bootstrap node for peer discovery
 ```
 
 > 📚 **Full documentation**: [`/docs`](/docs) folder contains architecture specs, crypto protocols, and deployment guides.
@@ -164,7 +156,7 @@ npm run start
 
 ## 🏗️ Architecture Overview
 
-```
+```text
 ┌─────────────────────────────────────┐
 │         Client (Browser PWA)         │
 │  ┌─────────────────────────────┐    │
@@ -206,7 +198,7 @@ npm run start
 ## 👨‍💻 Development
 
 ### Project Structure
-```
+```text
 riseup/
 ├── apps/
 │   ├── web/                 # Main PWA application (React)
@@ -261,7 +253,7 @@ const action = {
 };
 
 const signed = await signAction(action, privateKey);
-// → { data: {...}, signature: 'base64url...', publicKey: '...' }
+// Returns: { data: {...}, signature: 'base64url...', publicKey: '...' }
 
 // Verify before processing:
 const isValid = await verifySignature(signed);
@@ -369,8 +361,7 @@ We aim to respond within 48 hours and coordinate responsible disclosure.
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
-```
-MIT License
+**MIT License**
 
 Copyright (c) 2024 RiseUp Network
 
@@ -391,7 +382,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-```
 
 ---
 
